@@ -56,6 +56,17 @@ export const HELP_CONTENT = {
                 'Instances: List the Radarr/Sonarr instances you wish to use as source for renaming of posters,',
                 'Plex is used for collections only and not as a source for Movies/TV Shows.',
             ],
+            asset_renamerr: [
+                'Organizes and renames asset files for Kometa/Plex.',
+                'source_dirs: One or more folders to scan for asset, priority is:',
+                '  • Top = Lowest priority',
+                '  • Bottom = Highest priority',
+                'destination_dir: Where renamed/organized assets are moved.',
+                'Asset Folders: This setting MUST be the same to what you have set in Kometa',
+                "Print Only Renames: Print each file as it's processed.",
+                'Instances: List the Radarr/Sonarr instances you wish to use as source for renaming of posters,',
+                'Plex is used for collections only and not as a source for Movies/TV Shows.',
+            ],
             poster_cleanarr: [
                 'Ignore Media: List of media to ignore during cleaning of posters from your assets directory.',
                 'Source Dirs: Folders to scan for posters to clean, typically your Kometa assets directory.',

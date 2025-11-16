@@ -7,6 +7,7 @@
     "sync_gdrive": "",
     "poster_cleanarr": "",
     "poster_renamerr": "",
+    "asset_renamerr": "",
     "renameinatorr": "",
     "unmatched_assets": "",
     "upgradinatorr": "",
@@ -19,6 +20,7 @@
   },
   "notifications": {
     "poster_renamerr": {},
+    "asset_renamerr": {},
     "poster_cleanarr": {},
     "unmatched_assets": {},
     "health_checkarr": {},
@@ -50,6 +52,17 @@
     "destination_dir": "",
     "instances": []
   },
+  "asset_renamerr": {
+    "log_level": "info",
+    "dry_run": false,
+    "sync_assets": false,
+    "action_type": "copy",
+    "asset_folders": false,
+    "print_only_renames": false,
+    "source_dirs": [],
+    "destination_dir": "",
+    "instances": []
+  },
   "border_replacerr": {
     "log_level": "info",
     "dry_run": false,
@@ -66,7 +79,7 @@
     "source_dirs": [],
     "instances": [],
     "ignore_root_folders": [],
-    
+
     "ignore_collections": []
   },
   "poster_cleanarr": {
@@ -74,7 +87,7 @@
     "dry_run": true,
     "source_dirs": [],
     "instances": [],
-    
+
     "ignore_media": []
   },
   "upgradinatorr": {
@@ -104,7 +117,6 @@
     "exclude_movies": [],
     "exclude_series": [],
     "instances": []
-
   },
   "labelarr": {
     "log_level": "info",

@@ -1,5 +1,6 @@
 import { fetchConfig } from './helper.js';
 import { renderPosterRenamerrSettings } from './settings/modules/poster_renamerr.js';
+import { renderAssetRenamerrSettings } from './settings/modules/asset_renamerr.js';
 import { renderLabelarrSettings } from './settings/modules/labelarr.js';
 import { renderReplacerrSettings } from './settings/modules/border_replacerr.js';
 import { renderUpgradinatorrSettings } from './settings/modules/upgradinatorr.js';
@@ -18,6 +19,7 @@ const { bindSaveButton, markDirty } = DAPS;
 
 const MODULE_RENDERERS = {
     poster_renamerr: renderPosterRenamerrSettings,
+    asset_renamerr: renderAssetRenamerrSettings,
     labelarr: renderLabelarrSettings,
     border_replacerr: renderReplacerrSettings,
     upgradinatorr: renderUpgradinatorrSettings,

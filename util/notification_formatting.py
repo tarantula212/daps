@@ -207,7 +207,7 @@ def format_for_discord(
                 lst = grouped.setdefault(name, [])
                 if np := item.get("new_path_name"):
                     lst.append(
-                        f"Folder:\n{item.get('path_name','').lstrip('/')} -> {np.lstrip('/')}"
+                        f"Folder:\n{item.get('path_name', '').lstrip('/')} -> {np.lstrip('/')}"
                     )
                 for old, new in item.get("file_info", {}).items():
                     lst.append(old.lstrip("/"))
@@ -430,6 +430,7 @@ def format_for_discord(
 
     registry: Dict[str, Dict[str, Any]] = {
         "poster_renamerr": {"formatter": fmt_poster_renamerr, "type": "embedded"},
+        "asset_renamerr": {"formatter": fmt_poster_renamerr, "type": "embedded"},
         "renameinatorr": {"formatter": fmt_renameinatorr, "type": "embedded"},
         "health_checkarr": {"formatter": fmt_health_checkarr, "type": "embedded"},
         "nohl": {"formatter": fmt_nohl, "type": "embedded"},

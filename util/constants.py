@@ -1,6 +1,11 @@
 import re
 from typing import List, Pattern, Set
 
+# Matches suffixes like " - Logo" or "_Logo", as well as "- SquareArt" or "_SquareArt" (case-insensitive)
+asset_pattern: Pattern = re.compile(
+    r"(?:\s*-\s*(?:Logo|SquareArt|Background)\s*|_(?:Logo|SquareArt|Background))", re.IGNORECASE
+)
+
 # Matches suffixes like " - Season X" or "_SeasonX" (where X is 1–4 digits), as well as "- Specials" or "_Specials" (case-insensitive)
 season_pattern: Pattern = re.compile(
     r"(?:\s*-\s*Season\s*\d+|_Season\d{1,4}|\s*-\s*Specials|_Specials)", re.IGNORECASE

@@ -24,6 +24,7 @@ list_of_python_modules = [
     "nohl",
     "poster_cleanarr",
     "poster_renamerr",
+    "asset_renamerr",
     "renameinatorr",
     "sync_gdrive",
     "upgradinatorr",

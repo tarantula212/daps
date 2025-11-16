@@ -11,6 +11,7 @@ from util.constants import (
     illegal_chars_regex,
     remove_special_chars,
     season_pattern,
+    asset_pattern,
     year_regex,
 )
 from util.construct import create_collection, create_movie, create_series
@@ -49,6 +50,7 @@ def scan_files_in_flat_folder(folder_path: str, logger: Any) -> List[Dict]:
             title = unidecode(html.unescape(title))
             title = re.sub(illegal_chars_regex, "", title)
             raw_title = season_pattern.split(title)[0].strip()
+            raw_title = asset_pattern.split(title)[0].strip()
             normalized_title = remove_special_chars.sub("", raw_title.lower())
             if normalized_title in normalized_map:
                 match_key = normalized_map[normalized_title]
@@ -228,6 +230,9 @@ def parse_file_group(folder_path: str, base_name: str, files: List[str]) -> Dict
                 os.path.splitext(os.path.basename(files[0]))[0] if files else ""
             )
 
+        # remove asset type (if present)
+        media_folder = asset_pattern.split(media_folder)[0].strip()
+
         if is_collection:
             return create_collection(
                 title,
@@ -374,6 +379,7 @@ def process_selected_files(
             title = unidecode(html.unescape(title))
             title = re.sub(illegal_chars_regex, "", title)
             raw_title = season_pattern.split(title)[0].strip()
+            raw_title = asset_pattern.split(title)[0].strip()
             normalized_title = remove_special_chars.sub("", raw_title.lower())
             if normalized_title in normalized_map:
                 match_key = normalized_map[normalized_title]

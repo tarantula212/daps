@@ -4,6 +4,7 @@ import { humanize } from './common.js';
 export const moduleOrder = [
     'sync_gdrive',
     'poster_renamerr',
+    'asset_renamerr',
     'poster_cleanarr',
     'unmatched_assets',
     'border_replacerr',
@@ -18,6 +19,7 @@ export const moduleOrder = [
 
 export const NOTIFICATION_LIST = [
     'poster_renamerr',
+    'asset_renamerr',
     'unmatched_assets',
     'renameinatorr',
     'upgradinatorr',

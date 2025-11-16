@@ -2,6 +2,7 @@ export const BOOL_FIELDS = [
     'dry_run',
     'skip',
     'sync_posters',
+    'sync_assets',
     'run_border_replacerr',
     'print_files',
     'rename_folders',
@@ -77,6 +78,7 @@ export const DIR_PICKER = ['source_dirs', 'destination_dir', 'data_dir'];
 
 export const ARR_AND_PLEX_INSTANCES = [
     'poster_renamerr',
+    'asset_renamerr',
     'labelarr',
     'border_replacerr',
     'sync_gdrive',
@@ -88,12 +90,14 @@ export const ARR_AND_PLEX_INSTANCES = [
 ];
 export const SHOW_PLEX_IN_INSTANCE_FIELD = [
     'poster_renamerr',
+    'asset_renamerr',
     'unmatched_assets',
     'poster_cleanarr'
 ];
 
 export const DRAG_AND_DROP = {
     poster_renamerr: ['source_dirs'],
+    asset_renamerr: ['source_dirs']
 };
 
 export const LIST_FIELD = {
@@ -113,6 +117,10 @@ export const PLACEHOLDER_TEXT = {
         client_secret: 'GOCSPX-asda123',
     },
     poster_renamerr: {
+        source_dirs: 'Click to pick a source directory...',
+        destination_dir: '/path/to/Kometa/assets_directory',
+    },
+    asset_renamerr: {
         source_dirs: 'Click to pick a source directory...',
         destination_dir: '/path/to/Kometa/assets_directory',
     },
